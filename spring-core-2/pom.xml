@@ -210,7 +210,7 @@
         <guava.version>25.1-jre</guava.version>
         <easymock.version>3.6</easymock.version>
         <assertj.version>3.6.1</assertj.version>
-        <shedlock.version>2.1.0</shedlock.version>
+        <shedlock.version>4.31.0</shedlock.version>
         <javassist.version>3.22.0-GA</javassist.version>
     </properties>
 
