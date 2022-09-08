@@ -95,16 +95,14 @@
                         </goals>
                         <configuration>
                             <tasks>
-                                <property name="plugin_classpath" refid="maven.plugin.classpath" />
-                                <taskdef name="gen-reladomo" classpath="plugin_classpath" classname="com.gs.fw.common.mithra.generator.MithraGenerator" />
-                                <gen-reladomo xml="${project.basedir}/src/main/resources/reladomo/ReladomoClassList.xml" generateGscListMethod="true"
-                                              generatedDir="${project.build.directory}/generated-sources/reladomo" nonGeneratedDir="${project.basedir}/src/main/java" />
+                                <property name="plugin_classpath" refid="maven.plugin.classpath"/>
+                                <taskdef name="gen-reladomo" classpath="plugin_classpath" classname="com.gs.fw.common.mithra.generator.MithraGenerator"/>
+                                <gen-reladomo xml="${project.basedir}/src/main/resources/reladomo/ReladomoClassList.xml" generateGscListMethod="true" generatedDir="${project.build.directory}/generated-sources/reladomo" nonGeneratedDir="${project.basedir}/src/main/java"/>
 
                                 <taskdef name="gen-ddl" classname="com.gs.fw.common.mithra.generator.dbgenerator.MithraDbDefinitionGenerator" loaderRef="reladomoGenerator">
-                                    <classpath refid="maven.plugin.classpath" />
+                                    <classpath refid="maven.plugin.classpath"/>
                                 </taskdef>
-                                <gen-ddl xml="${project.basedir}/src/main/resources/reladomo/ReladomoClassList.xml"
-                                         generatedDir="${project.build.directory}/generated-db/sql" databaseType="postgres" />
+                                <gen-ddl xml="${project.basedir}/src/main/resources/reladomo/ReladomoClassList.xml" generatedDir="${project.build.directory}/generated-db/sql" databaseType="postgres"/>
                             </tasks>
                         </configuration>
                     </execution>
@@ -202,7 +200,7 @@
     </build>
 
     <properties>
-        <reladomo.version>16.5.1</reladomo.version>
+        <reladomo.version>18.1.0</reladomo.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>
         <maven-antrun-plugin.version>1.8</maven-antrun-plugin.version>
         <ormlite.version>5.0</ormlite.version>
